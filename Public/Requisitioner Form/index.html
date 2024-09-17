@@ -66,11 +66,11 @@
 
   <section class="containerDaniel">
     <div class="container ">
-      <header class="header" style="color: white;"> 
+      <header class="header" style="color: white;">
         <h1 id="title" class="text-center">Application for TLTD/TLT Section Equipment, Materials, Services Form</h1>
 
       </header>
-      <form id="survey-form" style="color: white;">
+      <form id="main-form" style="color: white;">
         <div class="form-group ">
           <label id="first-name-label" for="first-name">First Name</label>
           <input type="text" name="first-name" id="first-name" class="form-control" placeholder="Enter your first name"
@@ -97,7 +97,7 @@
 
         <div id="additional-field-container"></div> <!-- Container for the additional text field -->
 
-        <div class="form-group" >
+        <div class="form-group">
           <p>Purpose:</p>
           <select id="purposeDropdown" name="purpose" class="form-control" required="">
             <option disabled="" selected="" value="">None</option>
@@ -110,168 +110,188 @@
         <div id="purpose-field-container"></div> <!-- Container for the additional text field -->
 
 
-          <div class="form-group" style="color: white;">
-            <p>Available equipment categories?</p>
-          
-            <label>
-              <input name="prefer" value="Projector" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'Projector-date')">DLP/LCD Projector
-            </label>
-            <div id="Projector-date" style="display:none;">
-              <label>Select Date: <input type="date" name="Projector-date"></label>
-            </div>
-          
-            <label>
-              <input name="prefer" value="Laptop" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'Laptop-date')">Laptop
-            </label>
-            <div id="Laptop-date" style="display:none;">
-              <label>Select Date: <input type="date" name="Laptop-date"></label>
-            </div>
-          
-            <label>
-              <input name="prefer" value="Overhead-Projector" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'Overhead-date')">Overhead Projector
-            </label>
-            <div id="Overhead-date" style="display:none;">
-              <label>Select Date: <input type="date" name="Overhead-date"></label>
-            </div>
-          
-            <label>
-              <input name="prefer" value="VHS-Player" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'VHS-date')">VHS Player
-            </label>
-            <div id="VHS-date" style="display:none;">
-              <label>Select Date: <input type="date" name="VHS-date"></label>
-            </div>
-          
-            <label>
-              <input name="prefer" value="Sound-System" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'Sound-System-date')">Sound System
-            </label>
-            <div id="Sound-System-date" style="display:none;">
-              <label>Select Date: <input type="date" name="Sound-System-date"></label>
-            </div>
-          
-            <label>
-              <input name="prefer" value="DVD-Player" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'DVD-Player-date')">DVD Player
-            </label>
-            <div id="DVD-Player-date" style="display:none;">
-              <label>Select Date: <input type="date" name="DVD-Player-date"></label>
-            </div>
-          
-            <label>
-              <input name="prefer" value="VCD-Player" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'VCD-Player-date')">VCD Player
-            </label>
-            <div id="VCD-Player-date" style="display:none;">
-              <label>Select Date: <input type="date" name="VCD-Player-date"></label>
-            </div>
-          
-            <label>
-              <input name="prefer" value="CD-Cassette" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'CD-Cassette-date')">CD Cassette Player
-            </label>
-            <div id="CD-Cassette-date" style="display:none;">
-              <label>Select Date: <input type="date" name="CD-Cassette-date"></label>
-            </div>
-          
-            <label>
-              <input name="prefer" value="Karaoke" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'Karaoke-date')">Karaoke
-            </label>
-            <div id="Karaoke-date" style="display:none;">
-              <label>Select Date: <input type="date" name="Karaoke-date"></label>
-            </div>
-          
-            <label>
-              <input name="prefer" value="Microphone" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'Microphone-date')">Microphone
-            </label>
-            <div id="Microphone-date" style="display:none;">
-              <label>Select Date: <input type="date" name="Microphone-date"></label>
-            </div>
-          
-            <label>
-              <input name="prefer" value="Document-Camera" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'Document-Camera-date')">Document Camera
-            </label>
-            <div id="Document-Camera-date" style="display:none;">
-              <label>Select Date: <input type="date" name="Document-Camera-date"></label>
-            </div>
-          
-            <label>
-              <input name="prefer" value="Digital-Video-Camera" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'Digital-Video-Camera-date')">Digital Video Camera
-            </label>
-            <div id="Digital-Video-Camera-date" style="display:none;">
-              <label>Select Date: <input type="date" name="Digital-Video-Camera-date"></label>
-            </div>
-          
-            <label>
-              <input name="prefer" value="Digital-Still-Camera" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'Digital-Still-Camera-date')">Digital Still Camera
-            </label>
-            <div id="Digital-Still-Camera-date" style="display:none;">
-              <label>Select Date: <input type="date" name="Digital-Still-Camera-date"></label>
-            </div>
-          
-            <label>
-              <input name="prefer" value="Instructional-Materials" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'Instructional-Materials-date', 'Instructional-Materials-text')">Instructional Materials
-            </label>
-            <div id="Instructional-Materials-date" style="display:none;">
-              <label>Select Date: <input type="date" name="Instructional-Materials-date"></label>
-            </div>
-            <!-- Placeholder for dynamically added text field -->
-            <div id="Instructional-Materials-text-container"></div>
+        <div class="form-group" style="color: white;">
+          <p>Available equipment categories?</p>
 
-            <label>
-              <input name="prefer" value="Others" type="checkbox" class="input-checkbox" onchange="toggleDateInput(this, 'Others-date', 'Others-text')">Others
-            </label>
-            <div id="Others-date" style="display:none;">
-              <label>Select Date: <input type="date" name="Others-date"></label>
-            </div>
-          
-            <!-- Placeholder for dynamically added text field -->
-            <div id="Others-text-container"></div>
-
-
+          <label>
+            <input name="prefer" value="Projector" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'Projector-date')">DLP/LCD Projector
+          </label>
+          <div id="Projector-date" style="display:none;">
+            <label>Select Date: <input type="date" name="Projector-date" style="color: #000;"></label>
           </div>
-          
-          <script>
-            function toggleDateInput(checkbox, dateInputId) {
-              var dateInputDiv = document.getElementById(dateInputId);
-              if (checkbox.checked) {
-                dateInputDiv.style.display = "block";
-              } else {
-                dateInputDiv.style.display = "none";
-              }
+
+          <label>
+            <input name="prefer" value="Laptop" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'Laptop-date')">Laptop
+          </label>
+          <div id="Laptop-date" style="display:none;">
+            <label>Select Date: <input type="date" name="Laptop-date" style="color: #000;"></label>
+          </div>
+
+          <label>
+            <input name="prefer" value="Overhead-Projector" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'Overhead-date')">Overhead Projector
+          </label>
+          <div id="Overhead-date" style="display:none;">
+            <label>Select Date: <input type="date" name="Overhead-date" style="color: #000;"></label>
+          </div>
+
+          <label>
+            <input name="prefer" value="VHS-Player" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'VHS-date')">VHS Player
+          </label>
+          <div id="VHS-date" style="display:none;">
+            <label>Select Date: <input type="date" name="VHS-date" style="color: #000;"></label>
+          </div>
+
+          <label>
+            <input name="prefer" value="Sound-System" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'Sound-System-date')">Sound System
+          </label>
+          <div id="Sound-System-date" style="display:none;">
+            <label>Select Date: <input type="date" name="Sound-System-date" style="color: #000;"></label>
+          </div>
+
+          <label>
+            <input name="prefer" value="DVD-Player" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'DVD-Player-date')">DVD Player
+          </label>
+          <div id="DVD-Player-date" style="display:none;">
+            <label>Select Date: <input type="date" name="DVD-Player-date" style="color: #000;"></label>
+          </div>
+
+          <label>
+            <input name="prefer" value="VCD-Player" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'VCD-Player-date')">VCD Player
+          </label>
+          <div id="VCD-Player-date" style="display:none;">
+            <label>Select Date: <input type="date" name="VCD-Player-date" style="color: #000;"></label>
+          </div>
+
+          <label>
+            <input name="prefer" value="CD-Cassette" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'CD-Cassette-date')">CD Cassette Player
+          </label>
+          <div id="CD-Cassette-date" style="display:none;">
+            <label>Select Date: <input type="date" name="CD-Cassette-date" style="color: #000;"></label>
+          </div>
+
+          <label>
+            <input name="prefer" value="Karaoke" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'Karaoke-date')">Karaoke
+          </label>
+          <div id="Karaoke-date" style="display:none;">
+            <label>Select Date: <input type="date" name="Karaoke-date" style="color: #000;"></label>
+          </div>
+
+          <label>
+            <input name="prefer" value="Microphone" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'Microphone-date')">Microphone
+          </label>
+          <div id="Microphone-date" style="display:none;">
+            <label>Select Date: <input type="date" name="Microphone-date" style="color: #000;"></label>
+          </div>
+
+          <label>
+            <input name="prefer" value="Document-Camera" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'Document-Camera-date')">Document Camera
+          </label>
+          <div id="Document-Camera-date" style="display:none;">
+            <label>Select Date: <input type="date" name="Document-Camera-date" style="color: #000;"></label>
+          </div>
+
+          <label>
+            <input name="prefer" value="Digital-Video-Camera" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'Digital-Video-Camera-date')">Digital Video Camera
+          </label>
+          <div id="Digital-Video-Camera-date" style="display:none;">
+            <label>Select Date: <input type="date" name="Digital-Video-Camera-date" style="color: #000;"></label>
+          </div>
+
+          <label>
+            <input name="prefer" value="Digital-Still-Camera" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'Digital-Still-Camera-date')">Digital Still Camera
+          </label>
+          <div id="Digital-Still-Camera-date" style="display:none;">
+            <label>Select Date: <input type="date" name="Digital-Still-Camera-date" style="color: #000;"></label>
+          </div>
+
+          <label>
+            <input name="prefer" value="Instructional-Materials" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'Instructional-Materials-date', 'Instructional-Materials-text')">Instructional
+            Materials
+          </label>
+          <div id="Instructional-Materials-date" style="display:none;">
+            <label>Select Date: <input type="date" name="Instructional-Materials-date" style="color: #000;"></label>
+          </div>
+          <!-- Placeholder for dynamically added text field -->
+          <div id="Instructional-Materials-text-container"></div>
+
+          <label>
+            <input name="prefer" value="Others" type="checkbox" class="input-checkbox"
+              onchange="toggleDateInput(this, 'Others-date', 'Others-text')">Others
+          </label>
+          <div id="Others-date" style="display:none;">
+            <label>Select Date: <input type="date" name="Others-date" style="color: #000;"></label>
+          </div>
+
+          <!-- Placeholder for dynamically added text field -->
+          <div id="Others-text-container"></div>
+
+
+        </div>
+
+        <script>
+          function toggleDateInput(checkbox, dateInputId) {
+            var dateInputDiv = document.getElementById(dateInputId);
+            if (checkbox.checked) {
+              dateInputDiv.style.display = "block";
+            } else {
+              dateInputDiv.style.display = "none";
             }
-          </script>
-          
-        
+          }
+        </script>
 
-          <div class="form-group">
-            <label>
-              <input type="checkbox" id="terms-checkbox" class="input-checkbox" onchange="showTermsPopup()"> I agree to the Terms and Conditions
-            </label>
-          </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="terms-checkbox" class="input-checkbox"> I agree to
+            the Terms and Conditions
+          </label>
+        </div>
 
-          <div id="terms-popup" class="popup-container">
-            <div class="popup-content" style="color: #000;">
-              <h2>Terms and Conditions</h2>
-              <p>
-                By using this form, you agree to the following terms and conditions:
-              </p>
-              <p>
-                I acknowledge receipt of and responsibility for item/s listed above which I promise to return on the specified date and time.
-              </p>
-              <p>
-                I agree to the imposed fine per hour for each material/equipment not returned on due time.
-              </p>
-              <p>
-                I also understand that I am accountable for any loss and/or damage of the item/s I borrowed. I promise to abide by all these policies and certify that personal data stated herein are correct.
-              </p>
-              <button id="agree-button" class="popup-button">Agree</button>
-            </div>
+        <div id="terms-popup" class="popup-container">
+          <div class="popup-content" style="color: #000;">
+            <h2>Terms and Conditions</h2>
+            <p>
+              By using this form, you agree to the following terms and conditions:
+            </p>
+            <p>
+              I acknowledge receipt of and responsibility for item/s listed above which I promise to return on the
+              specified date and time.
+            </p>
+            <p>
+              I agree to the imposed fine per hour for each material/equipment not returned on due time.
+            </p>
+            <p>
+              I also understand that I am accountable for any loss and/or damage of the item/s I borrowed. I promise to
+              abide by all these policies and certify that personal data stated herein are correct.
+            </p>
+            <button id="agree-button" class="popup-button" type="button">Agree</button>
+            <button id="close-button" class="popup-button" type="button">Close</button>
           </div>
-          
+        </div>
 
         <div class="form-group">
           <button type="submit" id="submit" class="submit-button">
             Submit
           </button>
         </div>
+
       </form>
+
     </div>
+
   </section>
 
   <section class="section-4">
@@ -335,7 +355,7 @@
     });
 
     const checkboxes = document.querySelectorAll('.input-checkbox');
-    
+
     checkboxes.forEach(checkbox => {
       checkbox.addEventListener('change', function () {
         if (checkbox.value === 'Others') {
@@ -392,24 +412,66 @@
   }
 </script>
 
-
-
-<script>// Terms & Conditions
-  function showTermsPopup() {
-    var termsCheckbox = document.getElementById('terms-checkbox');
-    var popup = document.getElementById('terms-popup');
-
-    if (termsCheckbox.checked) {
-      popup.style.display = 'block';
-    } else {
-      popup.style.display = 'none';
+<script>
+  // Show terms popup when checkbox is changed
+  document.getElementById('terms-checkbox').addEventListener('change', function () {
+    if (this.checked) {
+      document.getElementById('terms-popup').style.display = 'flex';
+      this.checked = false; // Uncheck the checkbox to prevent form submission
     }
-  }
+  });
 
-  document.getElementById('agree-button').onclick = function() {
-    var termsCheckbox = document.getElementById('terms-checkbox');
-    termsCheckbox.checked = true;
-    document.getElementById('terms-popup').style.display = 'none';
-  }
+  // Check checkbox and hide popup when agree button is clicked
+  document.getElementById('agree-button').addEventListener('click', function () {
+    document.getElementById('terms-checkbox').checked = true; // Check the checkbox
+    document.getElementById('terms-popup').style.display = 'none'; // Hide the popup
+  });
 
+  // Hide popup when close button is clicked
+  document.getElementById('close-button').addEventListener('click', function () {
+    document.getElementById('terms-popup').style.display = 'none'; // Hide the popup
+  });
+
+  // Prevent form submission if terms checkbox is not checked
+  document.getElementById('main-form').addEventListener('submit', function (event) {
+    console.log('Form submit event triggered'); // Debug log
+    if (!document.getElementById('terms-checkbox').checked) {
+      event.preventDefault(); // Prevent form submission
+      alert('You must agree to the Terms and Conditions before submitting.');
+      console.log('Form submission prevented'); // Debug log
+    }
+  });
+</script>
+
+<script> // Dynamic date input validation if dates are in the past or are null
+  document.getElementById('main-form').addEventListener('submit', function (event) {
+    var isValid = true;
+    var today = new Date().toISOString().split('T')[0]; // Gets today's date in YYYY-MM-DD format
+
+    // Function to validate date inputs
+    function validateDateInput(dateInputId) {
+      var dateInput = document.querySelector(`#${dateInputId} input[type="date"]`);
+      if (dateInput) {
+        var selectedDate = dateInput.value;
+        if (!selectedDate || selectedDate < today) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    // Validate only the date inputs corresponding to the checked checkboxes
+    var checkboxes = document.querySelectorAll('.input-checkbox:checked');
+    checkboxes.forEach(function (checkbox) {
+      var dateInputId = checkbox.value + '-date'; // e.g., 'Projector-date'
+      if (!validateDateInput(dateInputId)) {
+        isValid = false;
+        alert('Please ensure all date inputs are filled and are not in the past for checked items.');
+      }
+    });
+
+    if (!isValid) {
+      event.preventDefault(); // Prevent form submission if validation fails
+    }
+  });
 </script>
